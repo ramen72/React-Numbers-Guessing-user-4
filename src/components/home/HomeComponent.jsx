@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
+import { inputValue } from '../../slices/numberGassing/numberGassing';
 
 const HomeComponent = () => {
     
@@ -7,7 +8,7 @@ const HomeComponent = () => {
     
 
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     
 
     return (
@@ -33,7 +34,7 @@ const HomeComponent = () => {
                         <h2 id="inputArrayPlayer4">Player-4 guessed : <span id="inputArrayPlayerValue4"></span></h2>
                     </div>
 
-                    <input type="password" name="Numbers" id="playerInput1" placeholder="Please Enter Number (1-10)"/>
+                    <input onChange={(e) => dispatch(inputValue(e.target.value))} type="password" name="Numbers" id="playerInput1" placeholder="Please Enter Number (1-10)"/>
                     <button id="playerInputBtn1">Start</button><br/>
                     
                     {/* <input type="text" name="Numbers" id="playerInput2" placeholder="Please Enter Guessing Number (1-10)"/>

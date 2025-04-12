@@ -11,7 +11,7 @@ export const numberGassingSlice = createSlice({
   reducers: {
     inputValue: (state, action) => {
       console.log("first")
-      state.inputValue = action.payload;
+      // state.inputValue = action.payload;
     },
   },
 })
